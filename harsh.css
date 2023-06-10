@@ -1,0 +1,203 @@
+body {
+    transition: background 0.3s;
+    padding: 0;
+    margin: 0;
+  }
+  
+  html {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .darkmode {
+    background-color: rgb(71, 69, 69);
+    color: lavender;
+  }
+  
+  .toggle-switch {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 30px;
+  }
+  
+  .toggle-input {
+    display: none;
+  }
+  
+  .toggle-label {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-label:before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 28px;
+    height: 28px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  
+  .toggle-input:checked + .toggle-label {
+    background-color: #cbf20a; /* ON color */
+  }
+  
+  .toggle-input:checked + .toggle-label:before {
+    transform: translateX(30px);
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    background: #828e8f;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  #darkdiv {
+    width: 15vw;
+    display: flex;
+    align-items: center;
+  }
+  
+  #cards {
+    -webkit-box-shadow: 0 0 5px 2px #ed7373;
+    -moz-box-shadow: 0 0 5px 2px #fe6a6a;
+    box-shadow: 0 0 5px 2px grey;
+    border-radius: 7px;
+    width: 100%;
+    max-width: 16rem;
+    margin: 10px auto;
+    padding: 2px;
+    position: relative;
+    box-sizing: border-box;
+  }
+  
+  #cards img {
+    width: 100%;
+    margin: 0px;
+    border-radius: 5px;
+  }
+  
+  #cards #text {
+    padding: 10px;
+  }
+  
+  #cards button {
+    background-color: rgb(215, 167, 24);
+    border-radius: 5px;
+    margin: 5px 5px;
+  }
+  
+  #btn {
+    position: absolute;
+    bottom: 10px;
+    justify-content: center;
+  }
+  
+  #cards button:hover {
+    background: #828e8f;
+  }
+  
+  #cards button a {
+    text-decoration: none;
+    color: rgb(3, 3, 3);
+  }
+  
+  #cards #text {
+    margin: auto;
+  }
+  
+  #cardcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    /* Styles for screens up to 768px wide */
+    #cards {
+      max-width: 100%;
+    }
+    
+    #cardcontainer {
+      margin: 5px;
+    }
+    
+    #darkdiv {
+      width: 100px;
+    }
+    .toggle-switch {
+      width: 40px;
+      height: 20px;
+    }
+  
+    .toggle-label:before {
+      width: 18px;
+      height: 18px;
+      top: 1px;
+      left: 1px;
+    }
+  
+    .toggle-input:checked + .toggle-label:before {
+      transform: translateX(20px);
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    /* Styles for screens up to 480px wide */
+    #cards {
+      max-width: 100%;
+    }
+    
+    #cardcontainer {
+      margin: 5px;
+    }
+    
+    #darkdiv {
+      display: none;
+    }
+    .toggle-switch {
+      width: 40px;
+      height: 20px;
+    }
+  
+    .toggle-label:before {
+      width: 18px;
+      height: 18px;
+      top: 1px;
+      left: 1px;
+    }
+  
+    .toggle-input:checked + .toggle-label:before {
+      transform: translateX(20px);
+    }
+  }
+  
+  /* Add more media queries for different screen sizes if needed */
+  
+  /* General responsive styles */
+  html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
